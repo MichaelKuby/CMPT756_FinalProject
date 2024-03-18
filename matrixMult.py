@@ -1,8 +1,8 @@
 import sys
 import time
 
-# To run from the command line:
-# time python matrixMult.py s or m or l
+# To run from the command line: python matrixMult.py arg1 
+# where arg1 is the number of iterations to run the matrix multiplication
 # Runs sequentially
 
 class MatrixMult():
