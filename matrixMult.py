@@ -33,31 +33,38 @@ class MatrixMult():
                 for k in range(cols_A):
                     result[i][j] += A[i][k] * B[k][j]
                     
-        return
+        return result
 
 if __name__ == "__main__":
     start_time = time.perf_counter()
+
     # get input arg from command line
-    mode = sys.argv[1]
-    
-    if mode == 's':
-        # compute a 3 * 3 matrix multiplication
-        A = [[i for i in range(5)] for _ in range(5)]
-        B = [[i for i in range(5)] for _ in range(5)]
-    elif mode == 'm':
-        # compute a 500 * 500 matrix multiplication
-        A = [[i for i in range(500)] for _ in range(500)]
-        B = [[i for i in range(500)] for _ in range(500)]
-    elif mode == 'l':
-        # compute a 10000 * 10000 matrix multiplication
-        A = [[i for i in range(1000)] for _ in range(1000)]
-        B = [[i for i in range(1000)] for _ in range(1000)]
-    else:
-        print("Invalid mode. Please use 's' for small, 'm' for medium, or 'l' for large.")
+    iterations = sys.argv[1]
+
+    # Check if the input is valid by ensuring it consists of only integers
+    if not iterations.isdigit():
+        print("Invalid input. Please enter an integer.")
         sys.exit()
 
-    MatrixMult.matrix_multiplication(A, B)
+    # Convert the input to an integer
+    iterations = int(iterations)
+
+    # Make a diagonal matrix with 1's on the diagonal
+    A = [[1 if i == j else 0 for j in range(100)] for i in range(100)]
+
+    for _ in range(iterations):
+        A = MatrixMult.matrix_multiplication(A, A)
     
     end_time = time.perf_counter()
+    
     elapsed_time = end_time - start_time
-    print(f"The code executed in {elapsed_time} seconds.")
+
+    # Determine the max width for the label text to ensure alignment
+    label_width = max(len("The code started executing at"),
+                    len("The code finished executing at"),
+                    len("The code executed in"))
+
+    # Print statements with formatted alignment
+    print(f"{'The code started executing at':{label_width}} {start_time:15.6f} seconds.")
+    print(f"{'The code finished executing at':{label_width}} {end_time:15.6f} seconds.")
+    print(f"{'The code executed in':{label_width}} {elapsed_time:15.6f} seconds.")
