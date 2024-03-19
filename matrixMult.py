@@ -51,9 +51,9 @@ if __name__ == "__main__":
 
     # Make a diagonal matrix with 1's on the diagonal
     A = [[1 if i == j else 0 for j in range(100)] for i in range(100)]
-
+    B = A
     for _ in range(iterations):
-        A = MatrixMult.matrix_multiplication(A, A)
+        B = MatrixMult.matrix_multiplication(B, A)
     
     end_time = time.perf_counter()
     
