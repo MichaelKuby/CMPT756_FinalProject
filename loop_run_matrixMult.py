@@ -1,10 +1,12 @@
 import subprocess
 import sys
 from datetime import datetime
+import pytz
 
 
 def main(iterations):
-    start_time = datetime.now()
+    tz = pytz.timezone('America/Vancouver')
+    start_time = datetime.now(tz)
     start_time_formatted = start_time.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
     print(f'start_time: {start_time_formatted}')
 
@@ -12,7 +14,7 @@ def main(iterations):
         print(f'current times index: {iterations}')
         subprocess.run(["python3", "/home/ec2-user/matrixMult.py", f"{iterations}"])
 
-    end_time = datetime.now()
+    end_time = datetime.now(tz)
     end_time_formatted = end_time.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
     print(f'end_time: {end_time_formatted}')
 
