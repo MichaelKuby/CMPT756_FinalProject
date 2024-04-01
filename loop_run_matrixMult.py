@@ -11,7 +11,7 @@ def main(iterations):
     print(f'start_time: {start_time_formatted}')
 
     for i in range(iterations):
-        print(f'current times index: {iterations}')
+        print(f'current times index: {i}')
         subprocess.run(["python3", "/home/ec2-user/matrixMult.py", f"{iterations}"])
 
     end_time = datetime.now(tz)
