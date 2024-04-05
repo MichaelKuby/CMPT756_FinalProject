@@ -12,4 +12,4 @@
 - Run the code with command: ./test_lambda_jq.sh
 
 #### 4. Check the log
-- The logs are saved in the logs directory in a csv format.
+- The logs are saved in the <log> directory in a csv format.
