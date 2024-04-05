@@ -25,11 +25,6 @@ def handler(event, context):
     logger.info(f"Received event: {event}")
     start_time = time.perf_counter()
 
-    # # Get the number of iterations from the event object
-    # iterations = event.get('iterations', 1)  # Default to 1 if not specified
-
-    # # Ensure iterations is an integer
-    # iterations = int(iterations)
     body = json.loads(event.get('body', '{}'))
     iterations = body.get('iterations', 1)
     iterations = int(iterations)
@@ -43,7 +38,6 @@ def handler(event, context):
     end_time = time.perf_counter()
     elapsed_time = end_time - start_time
 
-    # Create a response object
     result = {
         "startTime": start_time,
         "endTime": end_time,
