@@ -2,3 +2,10 @@ Initial Start Time: 2024-04-05 15:04:11.304
 --------
 Current Times Index: 1
 Start Time: 2024-04-05 15:04:11.325
+The code started executing at       510.453478 seconds.
+The code finished executing at      532.912558 seconds.
+The code executed in                 22.459080 seconds.
+End Time: 2024-04-05 15:04:34.970
+--------
+Final Time: 2024-04-05 15:04:34.983
+Total time spent: 23.679 seconds
