@@ -1,0 +1,123 @@
+Initial Start Time: 2024-04-04 17:34:28.551
+--------
+Current Times Index: 1
+Start Time: 2024-04-04 17:34:28.571
+The code started executing at       182.530621 seconds.
+The code finished executing at      189.279141 seconds.
+The code executed in                  6.748520 seconds.
+End Time: 2024-04-04 17:34:36.405
+--------
+--------
+Current Times Index: 2
+Start Time: 2024-04-04 17:34:36.426
+The code started executing at       190.371954 seconds.
+The code finished executing at      197.160660 seconds.
+The code executed in                  6.788706 seconds.
+End Time: 2024-04-04 17:34:44.291
+--------
+--------
+Current Times Index: 3
+Start Time: 2024-04-04 17:34:44.319
+The code started executing at       198.285370 seconds.
+The code finished executing at      205.076402 seconds.
+The code executed in                  6.791033 seconds.
+End Time: 2024-04-04 17:34:52.205
+--------
+--------
+Current Times Index: 4
+Start Time: 2024-04-04 17:34:52.230
+The code started executing at       206.153177 seconds.
+The code finished executing at      212.972108 seconds.
+The code executed in                  6.818931 seconds.
+End Time: 2024-04-04 17:35:00.086
+--------
+--------
+Current Times Index: 5
+Start Time: 2024-04-04 17:35:00.106
+The code started executing at       214.063407 seconds.
+The code finished executing at      220.833533 seconds.
+The code executed in                  6.770126 seconds.
+End Time: 2024-04-04 17:35:07.953
+--------
+--------
+Current Times Index: 6
+Start Time: 2024-04-04 17:35:07.968
+The code started executing at       221.907507 seconds.
+The code finished executing at      228.599186 seconds.
+The code executed in                  6.691680 seconds.
+End Time: 2024-04-04 17:35:15.726
+--------
+--------
+Current Times Index: 7
+Start Time: 2024-04-04 17:35:15.747
+The code started executing at       229.676823 seconds.
+The code finished executing at      236.434465 seconds.
+The code executed in                  6.757641 seconds.
+End Time: 2024-04-04 17:35:23.557
+--------
+--------
+Current Times Index: 8
+Start Time: 2024-04-04 17:35:23.573
+The code started executing at       237.512395 seconds.
+The code finished executing at      244.287767 seconds.
+The code executed in                  6.775372 seconds.
+End Time: 2024-04-04 17:35:31.418
+--------
+--------
+Current Times Index: 9
+Start Time: 2024-04-04 17:35:31.449
+The code started executing at       245.377706 seconds.
+The code finished executing at      252.135002 seconds.
+The code executed in                  6.757295 seconds.
+End Time: 2024-04-04 17:35:39.266
+--------
+--------
+Current Times Index: 10
+Start Time: 2024-04-04 17:35:39.301
+The code started executing at       253.244217 seconds.
+The code finished executing at      260.013466 seconds.
+The code executed in                  6.769249 seconds.
+End Time: 2024-04-04 17:35:47.155
+--------
+--------
+Current Times Index: 11
+Start Time: 2024-04-04 17:35:47.180
+The code started executing at       261.155253 seconds.
+The code finished executing at      267.953816 seconds.
+The code executed in                  6.798563 seconds.
+End Time: 2024-04-04 17:35:55.144
+--------
+--------
+Current Times Index: 12
+Start Time: 2024-04-04 17:35:55.173
+The code started executing at       269.170284 seconds.
+The code finished executing at      275.963229 seconds.
+The code executed in                  6.792945 seconds.
+End Time: 2024-04-04 17:36:03.437
+--------
+--------
+Current Times Index: 13
+Start Time: 2024-04-04 17:36:03.460
+The code started executing at       277.381224 seconds.
+The code finished executing at      284.165712 seconds.
+The code executed in                  6.784488 seconds.
+End Time: 2024-04-04 17:36:11.288
+--------
+--------
+Current Times Index: 14
+Start Time: 2024-04-04 17:36:11.305
+The code started executing at       285.224217 seconds.
+The code finished executing at      292.019630 seconds.
+The code executed in                  6.795412 seconds.
+End Time: 2024-04-04 17:36:19.142
+--------
+--------
+Current Times Index: 15
+Start Time: 2024-04-04 17:36:19.155
+The code started executing at       293.109176 seconds.
+The code finished executing at      299.908159 seconds.
+The code executed in                  6.798983 seconds.
+End Time: 2024-04-04 17:36:27.598
+--------
+Final Time: 2024-04-04 17:36:27.613
+Total time spent: 119.062 seconds
