@@ -1,0 +1,29 @@
+Starting new test session at Thu Apr  4 23:43:24 PDT 2024
+---------------------------------
+Testing with 1 iterations...
+Response for 1 iterations:
+{
+  "startTime": 595.098937585,
+  "endTime": 595.195339625,
+  "elapsedTime": 0.09640203999992991,
+  "message": "Matrix multiplication completed successfully"
+}
+---------------------------------
+Testing with 10 iterations...
+Response for 10 iterations:
+{
+  "startTime": 595.447751505,
+  "endTime": 596.398371271,
+  "elapsedTime": 0.9506197659999316,
+  "message": "Matrix multiplication completed successfully"
+}
+---------------------------------
+Testing with 100 iterations...
+Response for 100 iterations:
+{
+  "startTime": 596.647836873,
+  "endTime": 606.185415259,
+  "elapsedTime": 9.537578386000064,
+  "message": "Matrix multiplication completed successfully"
+}
+---------------------------------

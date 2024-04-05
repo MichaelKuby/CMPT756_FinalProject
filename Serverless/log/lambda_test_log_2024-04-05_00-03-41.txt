@@ -1,0 +1,14 @@
+Starting new test session at Fri Apr  5 00:03:41 PDT 2024
+---------------------------------
+Testing with 400 iterations...
+Response for 400 iterations:
+{
+  "message": "Endpoint request timed out"
+}
+---------------------------------
+Testing with 500 iterations...
+Response for 500 iterations:
+{
+  "message": "Endpoint request timed out"
+}
+---------------------------------
