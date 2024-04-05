@@ -24,7 +24,7 @@ OUTPUT_FILE="$OUTPUT_DIR/output_result_$Initial_Start_Time_str.txt"
 mkdir -p "$OUTPUT_DIR"
 > "$OUTPUT_FILE"
 
-
+echo "Dimensions: $VM_SCRIPT_PARAM" "Iterations: $LOOP_TIMES" | tee -a "$OUTPUT_FILE"
 echo "Initial Start Time: $Initial_Start_Time_str" | tee -a "$OUTPUT_FILE"
 
 
