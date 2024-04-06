@@ -1,0 +1,96 @@
+Initial_Start_Time: [2024-04-05]21:55:03.166
+Dimensions: 15
+Iterations: 10
+Trip_Loops: 10
+Sleep_Duration: 10
+--------
+Current Trip Loops Index: 1
+Start Time: 2024-04-05 21:55:03.194
+The code started executing at     22036.979056 seconds.
+The code finished executing at    22036.988315 seconds.
+The code executed in                  0.009258 seconds.
+End Time: 2024-04-05 21:55:05.322
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 2
+Start Time: 2024-04-05 21:55:15.357
+The code started executing at     22048.795630 seconds.
+The code finished executing at    22048.804276 seconds.
+The code executed in                  0.008646 seconds.
+End Time: 2024-04-05 21:55:17.154
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 3
+Start Time: 2024-04-05 21:55:27.184
+The code started executing at     22060.577664 seconds.
+The code finished executing at    22060.586238 seconds.
+The code executed in                  0.008574 seconds.
+End Time: 2024-04-05 21:55:28.881
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 4
+Start Time: 2024-04-05 21:55:38.923
+The code started executing at     22072.265436 seconds.
+The code finished executing at    22072.278565 seconds.
+The code executed in                  0.013129 seconds.
+End Time: 2024-04-05 21:55:40.613
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 5
+Start Time: 2024-04-05 21:55:50.674
+The code started executing at     22083.782389 seconds.
+The code finished executing at    22083.791489 seconds.
+The code executed in                  0.009101 seconds.
+End Time: 2024-04-05 21:55:52.092
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 6
+Start Time: 2024-04-05 21:56:02.177
+The code started executing at     22095.181208 seconds.
+The code finished executing at    22095.189638 seconds.
+The code executed in                  0.008430 seconds.
+End Time: 2024-04-05 21:56:03.464
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 7
+Start Time: 2024-04-05 21:56:13.514
+The code started executing at     22106.586021 seconds.
+The code finished executing at    22106.594404 seconds.
+The code executed in                  0.008384 seconds.
+End Time: 2024-04-05 21:56:14.838
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 8
+Start Time: 2024-04-05 21:56:24.900
+The code started executing at     22118.945136 seconds.
+The code finished executing at    22118.954205 seconds.
+The code executed in                  0.009069 seconds.
+End Time: 2024-04-05 21:56:27.296
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 9
+Start Time: 2024-04-05 21:56:37.342
+The code started executing at     22130.308639 seconds.
+The code finished executing at    22130.317064 seconds.
+The code executed in                  0.008425 seconds.
+End Time: 2024-04-05 21:56:38.559
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 10
+Start Time: 2024-04-05 21:56:48.615
+The code started executing at     22141.713443 seconds.
+The code finished executing at    22141.722093 seconds.
+The code executed in                  0.008650 seconds.
+End Time: 2024-04-05 21:56:49.971
+--------
+Final Time: 2024-04-05 21:56:49.982
+Total time spent: 106.816 seconds
