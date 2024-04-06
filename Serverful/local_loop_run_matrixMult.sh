@@ -6,11 +6,25 @@ if [ "$#" -ne 3 ]; then
 fi
 
 # Example
-# ./local_loop_run_matrixMult.sh ec2-3-16-159-225.us-east-2.compute.amazonaws.com 25 10 
+# ssh -i /Users/michaelkuby/Documents/2024_sp_vm_instance.pem ec2-user@ec2-52-15-76-2.us-east-2.compute.amazonaws.com
+
+# Log directory and file name
+LOG_DIR="log"
+mkdir -p "$LOG_DIR"  # Create log directory if it doesn't exist
+
+# Timestamp for the log file name
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+
+# CSV file name with timestamp
+CSV_FILE="${LOG_DIR}/EC2_test_log_${TIMESTAMP}.csv"
+
+# Start new log session and write CSV header
+echo "iteration,startTime,endTime,elapsedTime,delay" > "$CSV_FILE"
 
 VM_USER="ec2-user"
 VM_IP="$1"
-VM_PRIVATE_KEY_PATH="/Users/yycouple/Documents/SFU/Distributed_Cloud_Systems/Final_Project/2024_sp_vm_instance.pem"
+VM_PRIVATE_KEY_PATH="/Users/michaelkuby/Downloads/2024_sp_vm_instance.pem"
+# VM_PRIVATE_KEY_PATH="/Users/yycouple/Documents/SFU/Distributed_Cloud_Systems/Final_Project/2024_sp_vm_instance.pem"
 VM_SCRIPT_PATH="/home/ec2-user/matrixMult.py"
 LOOP_TIMES="$3"
 VM_SCRIPT_PARAM="$2"  
@@ -42,6 +56,12 @@ do
     echo "End Time: $(gdate -d "@$END_TIME" +"%Y-%m-%d %H:%M:%S.%3N")" | tee -a "$OUTPUT_FILE"
 
     echo "--------" | tee -a "$OUTPUT_FILE"
+
+    # Compute the elapsed time
+    ELAPSEDTIME=$(echo "$END_TIME - $START_TIME" | bc)
+
+    # Write to CSV
+    echo "${i},${START_TIME},${END_TIME},${ELAPSEDTIME},${delay}" >> "$CSV_FILE"
 
 done
 

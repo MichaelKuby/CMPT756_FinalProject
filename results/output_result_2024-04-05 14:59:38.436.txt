@@ -1,8 +1,0 @@
-Initial Start Time: 2024-04-05 14:59:38.436
---------
-Current Times Index: 1
-Start Time: 2024-04-05 14:59:38.458
-End Time: 2024-04-05 15:00:53.483
---------
-Final Time: 2024-04-05 15:00:53.491
-Total time spent: 75.055 seconds
