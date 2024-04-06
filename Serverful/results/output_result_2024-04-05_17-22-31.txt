@@ -1,0 +1,2 @@
+Test Parameters: Dimensions: 10, Multiplications: 1, Loops: 1, Sleep: 0
+Total process duration: 0 seconds
