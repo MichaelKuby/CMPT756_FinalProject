@@ -31,7 +31,7 @@ Initial_Start_Time=$(gdate +%s.%3N)
 Initial_Start_Time_str=$(gdate -d "@$Initial_Start_Time" +"[%Y-%m-%d]%H:%M:%S.%3N")
 
 
-OUTPUT_DIR="$(dirname "$0")/results/$Initial_Start_Time_str"
+OUTPUT_DIR="$(dirname "$0")/results/$MATRIX_DIMENSIONS,$MATRIX_MULTIPLICATIONS,$ROUND_TRIP_LOOPS,$SLEEP_DURATION==>$Initial_Start_Time_str"
 mkdir -p "$OUTPUT_DIR"
 OUTPUT_FILE="${OUTPUT_DIR}/output.log"
 CSV_FILE="${OUTPUT_DIR}/result.csv"
@@ -43,7 +43,7 @@ echo "Iterations: $MATRIX_MULTIPLICATIONS"| tee -a "$OUTPUT_FILE"
 echo "Trip_Loops: $ROUND_TRIP_LOOPS"| tee -a "$OUTPUT_FILE"
 echo "Sleep_Duration: $SLEEP_DURATION"| tee -a "$OUTPUT_FILE"
 
-echo "dimensions,iterations,trip_Loops,sleep_Duration,current_trip_loops_index,startTime,endTime,total_time_spent" > "$CSV_FILE"
+echo "dimensions,iterations,trip_Loops,sleep_Duration,current_trip_loops_index,execution_time,network_delay,total_time_spent" > "$CSV_FILE"
 
 
 for (( i=1; i<=ROUND_TRIP_LOOPS; i++ ))
@@ -54,15 +54,24 @@ do
     START_TIME=$(gdate +%s.%3N)
     echo "Start Time: $(gdate -d "@$START_TIME" +"%Y-%m-%d %H:%M:%S.%3N")"| tee -a "$OUTPUT_FILE"
 
-    ssh -i "$VM_PRIVATE_KEY_PATH" ${VM_USER}@${VM_IP} "python3 ${VM_SCRIPT_PATH} ${MATRIX_DIMENSIONS} ${MATRIX_MULTIPLICATIONS}" | tee -a "$OUTPUT_FILE"
+    SSH_OUTPUT=$(mktemp)
+    ssh -i "$VM_PRIVATE_KEY_PATH" ${VM_USER}@${VM_IP} "python3 ${VM_SCRIPT_PATH} ${MATRIX_DIMENSIONS} ${MATRIX_MULTIPLICATIONS}" | tee "$SSH_OUTPUT" | tee -a "$OUTPUT_FILE"
+
+    EXEC_TIME=$(grep "The code executed in" "$SSH_OUTPUT" | awk '{print $5}')
+    echo "Execution time spent: $EXEC_TIME seconds" | tee -a "$OUTPUT_FILE"
+    rm "$SSH_OUTPUT"
 
     END_TIME=$(gdate +%s.%3N)
     echo "End Time: $(gdate -d "@$END_TIME" +"%Y-%m-%d %H:%M:%S.%3N")" | tee -a "$OUTPUT_FILE"
+    
+    DELAY=$(echo "$END_TIME - $START_TIME - $EXEC_TIME" | bc)
+    echo "Network delay spent: $DELAY seconds" | tee -a "$OUTPUT_FILE"
 
     echo "--------" | tee -a "$OUTPUT_FILE"
 
+
     # Write to CSV
-    echo "${MATRIX_DIMENSIONS},${MATRIX_MULTIPLICATIONS},${ROUND_TRIP_LOOPS},${SLEEP_DURATION},${i},${START_TIME},${END_TIME},0" >> "$CSV_FILE"
+    echo "${MATRIX_DIMENSIONS},${MATRIX_MULTIPLICATIONS},${ROUND_TRIP_LOOPS},${SLEEP_DURATION},${i},${EXEC_TIME},${DELAY},0" >> "$CSV_FILE"
 
     if [ "$i" -ne "$ROUND_TRIP_LOOPS" ] && [ "$SLEEP_DURATION" -gt 0 ]; then
         echo "Sleeping for ${SLEEP_DURATION} seconds..." | tee -a "$OUTPUT_FILE"
