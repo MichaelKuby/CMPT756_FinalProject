@@ -16,8 +16,8 @@
 
 # 1.1) Use "ssh CMPT756-ec2-instance" commend to connect to the ec2-instance
 
-# 2) Move a local file to the VM: scp -i <PATH TO PRIVATE KEY> <LOCAL_FILE> <VM_USER>@<VM_IP>:<VM_PATH>
-# Example: scp -i 2024_sp_vm_instance.pem matrixMult.py ec2-user@ec2-52-15-76-2.us-east-2.compute.amazonaws.com:~
+# 2) Move a local file to the VM: scp <LOCAL_FILE> <VM_USER>@<VM_IP>:<VM_PATH>
+# Example: scp matrixMult.py ec2-user@ec2-52-15-76-2.us-east-2.compute.amazonaws.com:~
 
 # 3) Run the script: ./local_loop_run_matrixMult_V2.sh <MATRIX_DIMENSIONS> <MATRIX_MULTIPLICATIONS> <ROUND_TRIP_LOOPS> <SLEEP_DURATION>
 # Example: ./local_loop_run_matrixMult_V2.sh 15 10 10 2
