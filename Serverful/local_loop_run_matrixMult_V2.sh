@@ -12,7 +12,9 @@
 #   ControlPersist 600 // This means that the control master connection will remain open for 600 seconds (10 minutes) after the last SSH session. During these 600 seconds, any new SSH connections will attempt to reuse the control master connection, thereby speeding up connection establishment.
 
 ################### USE ###################
-# 1) Config as above
+# 1.0) Config as above
+
+# 1.1) Use "ssh CMPT756-ec2-instance" commend to connect to the ec2-instance
 
 # 2) Move a local file to the VM: scp -i <PATH TO PRIVATE KEY> <LOCAL_FILE> <VM_USER>@<VM_IP>:<VM_PATH>
 # Example: scp -i 2024_sp_vm_instance.pem matrixMult.py ec2-user@ec2-52-15-76-2.us-east-2.compute.amazonaws.com:~
