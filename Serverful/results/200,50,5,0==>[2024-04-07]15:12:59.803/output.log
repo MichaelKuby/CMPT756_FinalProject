@@ -1,0 +1,57 @@
+Initial_Start_Time: [2024-04-07]15:12:59.803
+Dimensions: 200
+Iterations: 50
+Trip_Loops: 5
+Sleep_Duration: 0
+--------
+Current Trip Loops Index: 1
+Start Time: 2024-04-07 15:12:59.833
+The code started executing at    145699.032869 seconds.
+The code finished executing at   145789.651597 seconds.
+The code executed in                 90.618728 seconds.
+Execution time spent: 90.618728 seconds
+End Time: 2024-04-07 15:14:30.812
+Network delay spent: .360272 seconds
+--------
+--------
+Current Trip Loops Index: 2
+Start Time: 2024-04-07 15:14:30.830
+The code started executing at    145790.023715 seconds.
+The code finished executing at   145881.028098 seconds.
+The code executed in                 91.004382 seconds.
+Execution time spent: 91.004382 seconds
+End Time: 2024-04-07 15:16:02.069
+Network delay spent: .234618 seconds
+--------
+--------
+Current Trip Loops Index: 3
+Start Time: 2024-04-07 15:16:02.093
+The code started executing at    145881.289614 seconds.
+The code finished executing at   145972.071791 seconds.
+The code executed in                 90.782177 seconds.
+Execution time spent: 90.782177 seconds
+End Time: 2024-04-07 15:17:33.115
+Network delay spent: .239823 seconds
+--------
+--------
+Current Trip Loops Index: 4
+Start Time: 2024-04-07 15:17:33.135
+The code started executing at    145972.334617 seconds.
+The code finished executing at   146064.726413 seconds.
+The code executed in                 92.391797 seconds.
+Execution time spent: 92.391797 seconds
+End Time: 2024-04-07 15:19:05.774
+Network delay spent: .247203 seconds
+--------
+--------
+Current Trip Loops Index: 5
+Start Time: 2024-04-07 15:19:05.793
+The code started executing at    146064.991331 seconds.
+The code finished executing at   146155.711180 seconds.
+The code executed in                 90.719849 seconds.
+Execution time spent: 90.719849 seconds
+End Time: 2024-04-07 15:20:36.745
+Network delay spent: .232151 seconds
+--------
+Final Time: 2024-04-07 15:20:36.762
+Total time spent: 456.959 seconds

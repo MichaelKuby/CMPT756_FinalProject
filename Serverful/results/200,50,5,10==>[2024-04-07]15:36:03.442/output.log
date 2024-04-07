@@ -1,0 +1,61 @@
+Initial_Start_Time: [2024-04-07]15:36:03.442
+Dimensions: 200
+Iterations: 50
+Trip_Loops: 5
+Sleep_Duration: 10
+--------
+Current Trip Loops Index: 1
+Start Time: 2024-04-07 15:36:03.468
+The code started executing at    147082.635098 seconds.
+The code finished executing at   147173.281765 seconds.
+The code executed in                 90.646667 seconds.
+Execution time spent: 90.646667 seconds
+End Time: 2024-04-07 15:37:34.388
+Network delay spent: .273333 seconds
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 2
+Start Time: 2024-04-07 15:37:44.433
+The code started executing at    147183.588454 seconds.
+The code finished executing at   147274.519958 seconds.
+The code executed in                 90.931505 seconds.
+Execution time spent: 90.931505 seconds
+End Time: 2024-04-07 15:39:15.657
+Network delay spent: .292495 seconds
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 3
+Start Time: 2024-04-07 15:39:25.718
+The code started executing at    147284.902468 seconds.
+The code finished executing at   147376.271184 seconds.
+The code executed in                 91.368716 seconds.
+Execution time spent: 91.368716 seconds
+End Time: 2024-04-07 15:40:57.461
+Network delay spent: .374284 seconds
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 4
+Start Time: 2024-04-07 15:41:07.517
+The code started executing at    147386.673528 seconds.
+The code finished executing at   147480.136623 seconds.
+The code executed in                 93.463095 seconds.
+Execution time spent: 93.463095 seconds
+End Time: 2024-04-07 15:42:41.296
+Network delay spent: .315905 seconds
+--------
+Sleeping for 10 seconds...
+--------
+Current Trip Loops Index: 5
+Start Time: 2024-04-07 15:42:51.351
+The code started executing at    147490.516745 seconds.
+The code finished executing at   147581.662483 seconds.
+The code executed in                 91.145738 seconds.
+Execution time spent: 91.145738 seconds
+End Time: 2024-04-07 15:44:22.776
+Network delay spent: .279262 seconds
+--------
+Final Time: 2024-04-07 15:44:22.788
+Total time spent: 499.346 seconds

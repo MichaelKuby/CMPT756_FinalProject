@@ -1,0 +1,107 @@
+Initial_Start_Time: [2024-04-07]15:09:35.893
+Dimensions: 100
+Iterations: 60
+Trip_Loops: 10
+Sleep_Duration: 0
+--------
+Current Trip Loops Index: 1
+Start Time: 2024-04-07 15:09:35.926
+The code started executing at    145495.112872 seconds.
+The code finished executing at   145508.717783 seconds.
+The code executed in                 13.604912 seconds.
+Execution time spent: 13.604912 seconds
+End Time: 2024-04-07 15:09:49.825
+Network delay spent: .294088 seconds
+--------
+--------
+Current Trip Loops Index: 2
+Start Time: 2024-04-07 15:09:49.847
+The code started executing at    145509.038305 seconds.
+The code finished executing at   145522.760380 seconds.
+The code executed in                 13.722075 seconds.
+Execution time spent: 13.722075 seconds
+End Time: 2024-04-07 15:10:03.819
+Network delay spent: .249925 seconds
+--------
+--------
+Current Trip Loops Index: 3
+Start Time: 2024-04-07 15:10:03.842
+The code started executing at    145523.031397 seconds.
+The code finished executing at   145536.576211 seconds.
+The code executed in                 13.544814 seconds.
+Execution time spent: 13.544814 seconds
+End Time: 2024-04-07 15:10:17.628
+Network delay spent: .241186 seconds
+--------
+--------
+Current Trip Loops Index: 4
+Start Time: 2024-04-07 15:10:17.649
+The code started executing at    145536.839436 seconds.
+The code finished executing at   145550.655468 seconds.
+The code executed in                 13.816033 seconds.
+Execution time spent: 13.816033 seconds
+End Time: 2024-04-07 15:10:31.772
+Network delay spent: .306967 seconds
+--------
+--------
+Current Trip Loops Index: 5
+Start Time: 2024-04-07 15:10:31.795
+The code started executing at    145550.982879 seconds.
+The code finished executing at   145564.714943 seconds.
+The code executed in                 13.732064 seconds.
+Execution time spent: 13.732064 seconds
+End Time: 2024-04-07 15:10:45.840
+Network delay spent: .312936 seconds
+--------
+--------
+Current Trip Loops Index: 6
+Start Time: 2024-04-07 15:10:45.856
+The code started executing at    145565.047787 seconds.
+The code finished executing at   145578.621113 seconds.
+The code executed in                 13.573326 seconds.
+Execution time spent: 13.573326 seconds
+End Time: 2024-04-07 15:10:59.681
+Network delay spent: .251674 seconds
+--------
+--------
+Current Trip Loops Index: 7
+Start Time: 2024-04-07 15:10:59.704
+The code started executing at    145578.892430 seconds.
+The code finished executing at   145592.464577 seconds.
+The code executed in                 13.572147 seconds.
+Execution time spent: 13.572147 seconds
+End Time: 2024-04-07 15:11:13.591
+Network delay spent: .314853 seconds
+--------
+--------
+Current Trip Loops Index: 8
+Start Time: 2024-04-07 15:11:13.610
+The code started executing at    145592.811867 seconds.
+The code finished executing at   145606.473294 seconds.
+The code executed in                 13.661427 seconds.
+Execution time spent: 13.661427 seconds
+End Time: 2024-04-07 15:11:27.618
+Network delay spent: .346573 seconds
+--------
+--------
+Current Trip Loops Index: 9
+Start Time: 2024-04-07 15:11:27.636
+The code started executing at    145606.825186 seconds.
+The code finished executing at   145620.577775 seconds.
+The code executed in                 13.752589 seconds.
+Execution time spent: 13.752589 seconds
+End Time: 2024-04-07 15:11:41.650
+Network delay spent: .261411 seconds
+--------
+--------
+Current Trip Loops Index: 10
+Start Time: 2024-04-07 15:11:41.672
+The code started executing at    145620.895930 seconds.
+The code finished executing at   145634.430881 seconds.
+The code executed in                 13.534952 seconds.
+Execution time spent: 13.534952 seconds
+End Time: 2024-04-07 15:11:55.490
+Network delay spent: .283048 seconds
+--------
+Final Time: 2024-04-07 15:11:55.508
+Total time spent: 139.615 seconds

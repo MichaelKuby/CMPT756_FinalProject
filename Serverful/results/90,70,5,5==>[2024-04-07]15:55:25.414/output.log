@@ -1,0 +1,61 @@
+Initial_Start_Time: [2024-04-07]15:55:25.414
+Dimensions: 90
+Iterations: 70
+Trip_Loops: 5
+Sleep_Duration: 5
+--------
+Current Trip Loops Index: 1
+Start Time: 2024-04-07 15:55:25.442
+The code started executing at    148244.685434 seconds.
+The code finished executing at   148256.228782 seconds.
+The code executed in                 11.543348 seconds.
+Execution time spent: 11.543348 seconds
+End Time: 2024-04-07 15:55:37.314
+Network delay spent: .328652 seconds
+--------
+Sleeping for 5 seconds...
+--------
+Current Trip Loops Index: 2
+Start Time: 2024-04-07 15:55:42.351
+The code started executing at    148261.509524 seconds.
+The code finished executing at   148273.074994 seconds.
+The code executed in                 11.565470 seconds.
+Execution time spent: 11.565470 seconds
+End Time: 2024-04-07 15:55:54.166
+Network delay spent: .249530 seconds
+--------
+Sleeping for 5 seconds...
+--------
+Current Trip Loops Index: 3
+Start Time: 2024-04-07 15:55:59.208
+The code started executing at    148278.372688 seconds.
+The code finished executing at   148289.919098 seconds.
+The code executed in                 11.546410 seconds.
+Execution time spent: 11.546410 seconds
+End Time: 2024-04-07 15:56:11.061
+Network delay spent: .306590 seconds
+--------
+Sleeping for 5 seconds...
+--------
+Current Trip Loops Index: 4
+Start Time: 2024-04-07 15:56:16.103
+The code started executing at    148295.264807 seconds.
+The code finished executing at   148306.855418 seconds.
+The code executed in                 11.590611 seconds.
+Execution time spent: 11.590611 seconds
+End Time: 2024-04-07 15:56:27.962
+Network delay spent: .268389 seconds
+--------
+Sleeping for 5 seconds...
+--------
+Current Trip Loops Index: 5
+Start Time: 2024-04-07 15:56:33.004
+The code started executing at    148312.188058 seconds.
+The code finished executing at   148323.794471 seconds.
+The code executed in                 11.606414 seconds.
+Execution time spent: 11.606414 seconds
+End Time: 2024-04-07 15:56:44.954
+Network delay spent: .343586 seconds
+--------
+Final Time: 2024-04-07 15:56:44.972
+Total time spent: 79.558 seconds

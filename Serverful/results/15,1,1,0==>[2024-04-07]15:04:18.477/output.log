@@ -1,0 +1,17 @@
+Initial_Start_Time: [2024-04-07]15:04:18.477
+Dimensions: 15
+Iterations: 1
+Trip_Loops: 1
+Sleep_Duration: 0
+--------
+Current Trip Loops Index: 1
+Start Time: 2024-04-07 15:04:18.504
+The code started executing at    145177.642473 seconds.
+The code finished executing at   145177.643337 seconds.
+The code executed in                  0.000864 seconds.
+Execution time spent: 0.000864 seconds
+End Time: 2024-04-07 15:04:18.749
+Network delay spent: .244136 seconds
+--------
+Final Time: 2024-04-07 15:04:18.767
+Total time spent: .290 seconds

@@ -1,0 +1,6 @@
+dimensions,iterations,trip_Loops,sleep_Duration,current_trip_loops_index,execution_time,network_delay,total_time_spent
+100,70,5,0,1,15.909312,.249688,81.202
+100,70,5,0,2,15.920743,.244257,81.202
+100,70,5,0,3,15.885004,.305996,81.202
+100,70,5,0,4,15.991843,.268157,81.202
+100,70,5,0,5,16.068054,.225946,81.202
