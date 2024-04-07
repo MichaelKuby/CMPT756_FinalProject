@@ -1,11 +1,10 @@
 #!/bin/bash
-process_start_time=$(python -c 'import time; print(time.time())')
 
 API_URL="https://2q26c54eti.execute-api.us-east-2.amazonaws.com/default/MatrixMult"
 
-iterations=(10)
-dimension=20
-sleep_duration=0
+iterations=(10 10)
+dimension=15
+sleep_duration=3
 
 LOG_DIR="log"
 mkdir -p "$LOG_DIR"
@@ -13,7 +12,8 @@ mkdir -p "$LOG_DIR"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 CSV_FILE="${LOG_DIR}/lambda_test_log_${TIMESTAMP}.csv"
 
-echo "iteration,dimension,startTime,endTime,elapsedTime,delay,sleepDuration,processElapsedTime" > "$CSV_FILE"
+# Include the total_process_duration header
+echo "dimension,iterations,trip_Loops,sleep_Duration,current_trip_loops_index,execution_time,network_delay,total_time_spent" > "$CSV_FILE"
 
 if ! command -v jq &> /dev/null
 then
@@ -21,44 +21,46 @@ then
     exit 1
 fi
 
+process_start_time=$(python -c 'import time; print(time.time())')
+prev_end_time=$process_start_time
 
-prev_end_time=0
-last_index=$(( ${#iterations[@]} - 1 ))
+cumulative_execution_time=0
+cumulative_sleep_time=0
+total_iterations=${#iterations[@]}
+last_index=$((total_iterations - 1))
+csv_content=()
 
 for index in "${!iterations[@]}"
 do
     i=${iterations[$index]}
+    current_trip_loops_index=$((index + 1))
     echo "Testing with ${i} iterations and matrix dimension ${dimension}..."
+    
+    iteration_start_time=$(python -c 'import time; print(time.time())')
+    
     response=$(curl -s -X POST "$API_URL" \
         -H "Content-Type: application/json" \
         -d "{\"iterations\": $i, \"dimension\": ${dimension}}")
     
-    startTime=$(echo "$response" | jq -r '.startTime')
-    endTime=$(echo "$response" | jq -r '.endTime')
-    elapsedTime=$(echo "$response" | jq -r '.elapsedTime')
-    matrixA=$(echo "$response" | jq '.matrixA')
-    matrixB=$(echo "$response" | jq '.matrixB')
-
-    # echo "Matrix A from iteration ${i}:"
-    # echo "$matrixA"
-    # echo "Matrix B from iteration ${i}:"
-    # echo "$matrixB"
-
-    if [ "$prev_end_time" != 0 ]; then
-        delay=$(echo "$startTime - $prev_end_time" | bc)
-        delay=$(printf "%.6f" "$delay")
-    else
-        delay=0
-    fi
-    prev_end_time=$endTime
-
-    process_current_time=$(python -c 'import time; print(time.time())')
-    process_elapsed_time=$(echo "$process_current_time - $process_start_time" | bc)
-
-    echo "${i},${dimension},${startTime},${endTime},${elapsedTime},${delay},${sleep_duration},$(printf "%.6f" $process_elapsed_time)" >> "$CSV_FILE"
+    iteration_end_time=$(python -c 'import time; print(time.time())')
+    execution_time=$(echo "$iteration_end_time - $iteration_start_time" | bc)
+    cumulative_execution_time=$(echo "$cumulative_execution_time + $execution_time" | bc)
     
-    # Only sleep if sleep_duration is greater than 0 and not the last iteration
-    if [ "$index" -ne "$last_index" ] && [ "$sleep_duration" -gt 0 ]; then
+    if [ $index -eq 0 ]; then
+        network_delay=$(echo "$iteration_start_time - $process_start_time" | bc)
+    else
+        cumulative_sleep_time=$(echo "$cumulative_sleep_time + $sleep_duration" | bc)
+        network_delay=$(echo "$iteration_start_time - $prev_end_time - $sleep_duration" | bc)
+    fi
+    prev_end_time=$iteration_end_time
+    
+    total_time_spent=$(echo "$cumulative_execution_time + $cumulative_sleep_time" | bc)
+    
+    # Store the row in an array for later use
+    csv_content+=("${dimension},${i},${total_iterations},${sleep_duration},${current_trip_loops_index},${execution_time},${network_delay}")
+    
+    # Sleep only if not the last iteration
+    if [ "$index" -ne "$last_index" ]; then
         echo "Sleeping for ${sleep_duration} seconds..."
         sleep $sleep_duration
     fi
@@ -67,4 +69,8 @@ done
 process_end_time=$(python -c 'import time; print(time.time())')
 total_process_duration=$(echo "$process_end_time - $process_start_time" | bc)
 
-echo "Total process duration: $(printf "%.6f" $total_process_duration)s" | tee -a "$CSV_FILE"
+# Now iterate over the stored CSV content and append the total_process_duration to each line
+for row in "${csv_content[@]}"
+do
+    echo "${row},${total_process_duration}" >> "$CSV_FILE"
+done
