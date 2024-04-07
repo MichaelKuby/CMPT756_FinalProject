@@ -2,9 +2,9 @@
 
 API_URL="https://2q26c54eti.execute-api.us-east-2.amazonaws.com/default/MatrixMult"
 
-iterations=(10 10 10 10 10 10 10 10 10 10)
-dimension=15
-sleep_duration=2
+iterations=(50 50 50 50 50)
+dimension=200
+sleep_duration=10
 
 LOG_DIR="log"
 mkdir -p "$LOG_DIR"
@@ -13,7 +13,7 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 CSV_FILE="${LOG_DIR}/lambda_test_log_${TIMESTAMP}.csv"
 
 # Include the total_process_duration header
-echo "dimension,iterations,trip_Loops,sleep_Duration,current_trip_loops_index,execution_time,network_delay,total_time_spent" > "$CSV_FILE"
+echo "dimension,iterations,trip_Loops,sleep_Duration,current_trip_loops_index,execution_time,network_delay,total_time_spent,Init_duration" > "$CSV_FILE"
 
 if ! command -v jq &> /dev/null
 then
