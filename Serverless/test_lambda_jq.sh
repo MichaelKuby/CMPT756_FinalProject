@@ -2,9 +2,9 @@
 
 API_URL="https://2q26c54eti.execute-api.us-east-2.amazonaws.com/default/MatrixMult"
 
-iterations=(10 10)
+iterations=(10 10 10 10 10 10 10 10 10 10)
 dimension=15
-sleep_duration=3
+sleep_duration=2
 
 LOG_DIR="log"
 mkdir -p "$LOG_DIR"
@@ -43,15 +43,17 @@ do
         -d "{\"iterations\": $i, \"dimension\": ${dimension}}")
     
     iteration_end_time=$(python -c 'import time; print(time.time())')
-    execution_time=$(echo "$iteration_end_time - $iteration_start_time" | bc)
+    # execution_time=$(echo "$iteration_end_time - $iteration_start_time" | bc)
+    execution_time=$(echo "$response" | jq -r '.elapsedTime')
     cumulative_execution_time=$(echo "$cumulative_execution_time + $execution_time" | bc)
     
-    if [ $index -eq 0 ]; then
-        network_delay=$(echo "$iteration_start_time - $process_start_time" | bc)
-    else
-        cumulative_sleep_time=$(echo "$cumulative_sleep_time + $sleep_duration" | bc)
-        network_delay=$(echo "$iteration_start_time - $prev_end_time - $sleep_duration" | bc)
-    fi
+    network_delay=$(echo "$iteration_end_time - $iteration_start_time - $execution_time" | bc)
+    # if [ $index -eq 0 ]; then
+    #     network_delay=$(echo "$iteration_start_time - $process_start_time" | bc)
+    # else
+    #     cumulative_sleep_time=$(echo "$cumulative_sleep_time + $sleep_duration" | bc)
+    #     network_delay=$(echo "$iteration_start_time - $prev_end_time - $sleep_duration" | bc)
+    # fi
     prev_end_time=$iteration_end_time
     
     total_time_spent=$(echo "$cumulative_execution_time + $cumulative_sleep_time" | bc)
