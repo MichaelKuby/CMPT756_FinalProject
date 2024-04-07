@@ -8,7 +8,7 @@
 # Example: scp -i 2024_sp_vm_instance.pem matrixMult.py ec2-user@ec2-52-15-76-2.us-east-2.compute.amazonaws.com:~
 
 # 3) Run the script: ./local_loop_run_matrixMult.sh <VM_IP> <MATRIX_DIMENSIONS> <MATRIX_MULTIPLICATIONS> <ROUND_TRIP_LOOPS> <SLEEP_DURATION>
-# Example: ./local_loop_run_matrixMult.sh ec2-52-15-76-2.us-east-2.compute.amazonaws.com 10 1 1 0
+# Example: ./local_loop_run_matrixMult.sh ec2-18-223-149-168.us-east-2.compute.amazonaws.com 10 1 1 0
 ################### USE END ###################
 
 if [ "$#" -ne 5 ]; then
